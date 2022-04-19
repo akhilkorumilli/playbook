@@ -1,0 +1,8 @@
+---
+- hosts: dev
+  remote_user: ansible
+  become_user: root
+  become: yes
+  tasks:
+   - name: create directory
+     file: path=/tmp/dir1 state=directory
