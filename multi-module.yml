@@ -1,0 +1,8 @@
+---
+ - hosts: pat
+   become: yes
+   gather_facts: true
+   tasks:
+    - copy: src=/var/log/messages dest=/tmp/
+    - file: name=/tmp/newfile state=touch
+
